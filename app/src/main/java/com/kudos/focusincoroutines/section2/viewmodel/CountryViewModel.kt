@@ -4,7 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.kudos.focusincoroutines.section2.model.Country
+import com.kudos.focusincoroutines.section2.network.models.Country
 import com.kudos.focusincoroutines.section2.network.models.GetCountriesResponseItem
 import com.kudos.focusincoroutines.section2.repository.CountryRepository
 import com.kudos.focusincoroutines.section2.util.ApiResponse

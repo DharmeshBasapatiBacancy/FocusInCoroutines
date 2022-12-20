@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="10dp"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/newsImageView"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/sample_news"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/newsAuthorTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#66000000"
+            android:padding="15dp"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@id/newsImageView"
+            tools:text="Dharmesh Basapati" />
+
+        <TextView
+            android:id="@+id/newsTitleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/newsImageView"
+            tools:text="NASA Named Best Place to Work in Federal Government for 8th Straight Year" />
+
+        <TextView
+            android:id="@+id/newsDateTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="10dp"
+            android:textColor="@color/design_default_color_primary"
+            app:layout_constraintTop_toBottomOf="@id/newsTitleTextView"
+            tools:text="DEC 18" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

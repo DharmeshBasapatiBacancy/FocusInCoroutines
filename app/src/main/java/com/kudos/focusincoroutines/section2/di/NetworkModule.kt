@@ -15,30 +15,30 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 object NetworkModule {
 
-    @Singleton
-    @Provides
-    fun provideOkHttp(httpLoggingInterceptor: HttpLoggingInterceptor): OkHttpClient {
-        return OkHttpClient.Builder()
-            .addInterceptor(httpLoggingInterceptor)
-            .build()
-    }
-
-    @Singleton
-    @Provides
-    fun provideLoggingInterceptor(): HttpLoggingInterceptor {
-        return HttpLoggingInterceptor().apply {
-            this.level = HttpLoggingInterceptor.Level.BODY
-        }
-    }
-
-    @Provides
-    fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit {
-        return Retrofit.Builder()
-            .baseUrl("https://raw.githubusercontent.com/")
-            .addConverterFactory(GsonConverterFactory.create())
-            .client(okHttpClient)
-            .build()
-    }
+//    @Singleton
+//    @Provides
+//    fun provideOkHttp(httpLoggingInterceptor: HttpLoggingInterceptor): OkHttpClient {
+//        return OkHttpClient.Builder()
+//            .addInterceptor(httpLoggingInterceptor)
+//            .build()
+//    }
+//
+//    @Singleton
+//    @Provides
+//    fun provideLoggingInterceptor(): HttpLoggingInterceptor {
+//        return HttpLoggingInterceptor().apply {
+//            this.level = HttpLoggingInterceptor.Level.BODY
+//        }
+//    }
+//
+//    @Provides
+//    fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit {
+//        return Retrofit.Builder()
+//            .baseUrl("https://raw.githubusercontent.com/")
+//            .addConverterFactory(GsonConverterFactory.create())
+//            .client(okHttpClient)
+//            .build()
+//    }
 
     @Provides
     fun provideApiService(retrofit: Retrofit): ApiService {
